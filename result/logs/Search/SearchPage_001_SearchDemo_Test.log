@@ -1,0 +1,5 @@
+com.young.appiumcombat.plugins.excelReporter.TestResultListener.onTestStart(TestResultListener.java:57) [2017-04-18 11:12:26] [INFO] searchDemo 测试用例开始执行！
+com.young.appiumcombat.plugins.excelReporter.TestResultListener.onTestSkipped(TestResultListener.java:43) [2017-04-18 11:12:26] [WARN] searchDemo 测试用例由于某些原因被跳过！
+com.young.appiumcombat.plugins.excelReporter.TestResultListener.saveScreenShot(TestResultListener.java:122) [2017-04-18 11:12:26] [ERROR] [SearchPage_001_SearchDemo_Test] ,截图失败，原因：null
+com.young.appiumcombat.plugins.excelReporter.TestResultListener.onFinish(TestResultListener.java:76) [2017-04-18 11:12:26] [INFO] 被跳过的用例 = searchDemo
+com.young.appiumcombat.plugins.excelReporter.utils.CreateExcelForResult.createExcelReport(CreateExcelForResult.java:475) [2017-04-18 11:12:29] [INFO] Excel报告已经生成，请查看：[D:\automation\workspace\AppiumStudy\test-output\excelReports\TestReport_2017-04-18_11-12-appium实战-Android篇.xlsx]
