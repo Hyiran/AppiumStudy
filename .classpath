@@ -46,5 +46,7 @@
 	<classpathentry kind="lib" path="libs/commons-configuration-1.9.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang-2.6.jar"/>
 	<classpathentry kind="lib" path="libs/qdox-1.12.1.jar"/>
+	<classpathentry kind="lib" path="libs/testng-6.9.10-sources.jar"/>
+	<classpathentry kind="lib" path="libs/testng-6.9.10.jar" sourcepath="libs/testng-6.9.10-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
