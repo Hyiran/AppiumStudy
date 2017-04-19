@@ -40,7 +40,6 @@
 	<classpathentry kind="lib" path="libs/poi-scratchpad-3.15.jar"/>
 	<classpathentry kind="lib" path="libs/selenium-java-2.53.0-srcs.jar"/>
 	<classpathentry kind="lib" path="libs/selenium-java-2.53.0.jar"/>
-	<classpathentry kind="lib" path="libs/testng-6.9.9.jar"/>
 	<classpathentry kind="lib" path="libs/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="libs/jxl-2.6.12.jar"/>
 	<classpathentry kind="lib" path="libs/commons-configuration-1.9.jar"/>

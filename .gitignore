@@ -12,3 +12,7 @@
 hs_err_pid*
 
 *.log
+
+bin/**
+
+result/test-output/**
