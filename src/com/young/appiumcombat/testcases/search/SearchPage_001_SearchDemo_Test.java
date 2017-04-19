@@ -16,8 +16,9 @@ import com.young.appiumcombat.pageshelper.SearchWebviewPageHelper;
 
 public class SearchPage_001_SearchDemo_Test  extends BasePrepare{
 	
+	// 执行此方法之前会先去取测试数据，取测试数据时就会调用ExcelDataProvider中的hasNext方法,循环遍历所有数据，返回Object[]类型的数组
 	@Test(dataProvider="testData")
-	public void searchDemo(Map<String, String> data){
+	public void searchDemo(Map<String, String> data){	//这里的map数据来源于ExcelDataProvider.next()存进去的数据
 		//去除欢迎界面和定位弹窗
 		InitPageHelper.handleInit(appiumUtil, InitPage.byElements);
 		//点击搜索按钮

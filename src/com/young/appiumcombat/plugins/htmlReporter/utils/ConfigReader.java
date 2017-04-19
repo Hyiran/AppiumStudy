@@ -1,4 +1,5 @@
 package com.young.appiumcombat.plugins.htmlReporter.utils;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,7 +8,8 @@ import java.util.Properties;
 
 import org.testng.log4testng.Logger;
 
-public class ConfigReader {
+public class ConfigReader
+{
 	private static Logger logger = Logger.getLogger(ConfigReader.class);
 	private static ConfigReader cr;
 	private int retryCount = 0;
@@ -18,55 +20,73 @@ public class ConfigReader {
 	private static final String SOURCEENCODING = "sourcecodeencoding";
 	private static final String CONFIGFILE = "./res/properties/config.properties";
 
-	private ConfigReader() {
+	private ConfigReader()
+	{
 		readConfig(CONFIGFILE);
 	}
 
-	public static ConfigReader getInstance() {
-		if (cr == null) {
+	public static ConfigReader getInstance()
+	{
+		if (cr == null)
+		{
 			cr = new ConfigReader();
 		}
 		return cr;
 	}
 
-	private void readConfig(String fileName) {
+	private void readConfig(String fileName)
+	{
 		Properties properties = getConfig(fileName);
-		if (properties != null) {
+		if (properties != null)
+		{
 			String sRetryCount = null;
 
 			Enumeration<?> en = properties.propertyNames();
-			while (en.hasMoreElements()) {
+			while (en.hasMoreElements())
+			{
 				String key = (String) en.nextElement();
-				if (key.toLowerCase().equals(RETRYCOUNT)) {
+				if (key.toLowerCase().equals(RETRYCOUNT))
+				{
 					sRetryCount = properties.getProperty(key);
 				}
-				if (key.toLowerCase().equals(SOURCEDIR)) {
+				if (key.toLowerCase().equals(SOURCEDIR))
+				{
 					sourceCodeDir = properties.getProperty(key);
 				}
-				if (key.toLowerCase().equals(SOURCEENCODING)) {
+				if (key.toLowerCase().equals(SOURCEENCODING))
+				{
 					sourceCodeEncoding = properties.getProperty(key);
 				}
 			}
-			if (sRetryCount != null) {
+			if (sRetryCount != null)
+			{
 				sRetryCount = sRetryCount.trim();
-				try {
+				try
+				{
 					retryCount = Integer.parseInt(sRetryCount);
-				} catch (final NumberFormatException e) {
-					throw new NumberFormatException("Parse " + RETRYCOUNT + " [" + sRetryCount + "] from String to Int Exception");
+				}
+				catch (final NumberFormatException e)
+				{
+					throw new NumberFormatException("Parse " + RETRYCOUNT
+							+ " [" + sRetryCount
+							+ "] from String to Int Exception");
 				}
 			}
 		}
 	}
 
-	public int getRetryCount() {
+	public int getRetryCount()
+	{
 		return this.retryCount;
 	}
 
-	public String getSourceCodeDir() {
+	public String getSourceCodeDir()
+	{
 		return this.sourceCodeDir;
 	}
 
-	public String getSrouceCodeEncoding() {
+	public String getSrouceCodeEncoding()
+	{
 		return this.sourceCodeEncoding;
 	}
 
@@ -76,14 +96,20 @@ public class ConfigReader {
 	 * 
 	 * @return
 	 */
-	private Properties getConfig(String propertyFileName) {
+	private Properties getConfig(String propertyFileName)
+	{
 		Properties properties = new Properties();
-		try {
+		try
+		{
 			properties.load(new FileInputStream(propertyFileName));
-		} catch (FileNotFoundException e) {
+		}
+		catch (FileNotFoundException e)
+		{
 			properties = null;
 			logger.warn("FileNotFoundException:" + propertyFileName);
-		} catch (IOException e) {
+		}
+		catch (IOException e)
+		{
 			properties = null;
 			logger.warn("IOException:" + propertyFileName);
 		}

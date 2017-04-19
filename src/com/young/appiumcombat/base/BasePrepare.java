@@ -73,7 +73,10 @@ public class BasePrepare
 	{
 		String moduleName = null; // 模块的名字
 		String caseNum = null; // 用例编号
+		
 		String className = this.getClass().getName();
+		System.out.println("className: " + className);	//这里动态获取测试用例名称
+		
 		int dotIndexNum = className.indexOf("."); // 取得第一个.的index
 		int underlineIndexNum = className.indexOf("_"); // 取得第一个_的index
 
